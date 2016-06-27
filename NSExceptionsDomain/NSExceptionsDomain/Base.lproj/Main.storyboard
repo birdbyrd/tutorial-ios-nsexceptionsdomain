@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSExceptionsDomain" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://apple.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e9-Uf-wXj">
+                                <rect key="frame" x="20" y="20" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://blog.birdbyrd.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyv-T3-q1M">
+                                <rect key="frame" x="20" y="50" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52p-m9-WMB">
+                                <rect key="frame" x="215" y="46" width="116" height="30"/>
+                                <state key="normal" title="SEND HTTP GET"/>
+                                <connections>
+                                    <action selector="sendHttpGetToBirdByrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0kX-1L-9bk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVT-CR-Ghr">
+                                <rect key="frame" x="20" y="96" width="560" height="100"/>
+                                <string key="text">apple.com is not listed in NSExceptionsDomain. birdbyrd.com is listed in NSExceptionDomain.
+
+Click SEND HTTP GET of each domain and see the reponse in console output.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-k0-h6w">
+                                <rect key="frame" x="155" y="16" width="116" height="30"/>
+                                <state key="normal" title="SEND HTTP GET"/>
+                                <connections>
+                                    <action selector="sendHttpGetToApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gyb-K9-SYe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wyv-T3-q1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1wW-za-cxA"/>
+                            <constraint firstItem="3e9-Uf-wXj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BnN-gz-KfE"/>
+                            <constraint firstItem="3e9-Uf-wXj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HXU-Jk-Nvd"/>
+                            <constraint firstItem="52p-m9-WMB" firstAttribute="leading" secondItem="wyv-T3-q1M" secondAttribute="trailing" constant="8" id="Nw8-D2-5ZW"/>
+                            <constraint firstItem="EIE-k0-h6w" firstAttribute="leading" secondItem="3e9-Uf-wXj" secondAttribute="trailing" constant="8" id="OcX-lQ-9Di"/>
+                            <constraint firstItem="52p-m9-WMB" firstAttribute="centerY" secondItem="wyv-T3-q1M" secondAttribute="centerY" id="PNo-Rr-HEw"/>
+                            <constraint firstItem="xVT-CR-Ghr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ti5-ry-wcU"/>
+                            <constraint firstItem="xVT-CR-Ghr" firstAttribute="top" secondItem="52p-m9-WMB" secondAttribute="bottom" constant="20" id="fgx-QX-GOw"/>
+                            <constraint firstItem="wyv-T3-q1M" firstAttribute="top" secondItem="EIE-k0-h6w" secondAttribute="bottom" constant="4" id="peg-fB-eNk"/>
+                            <constraint firstItem="EIE-k0-h6w" firstAttribute="centerY" secondItem="3e9-Uf-wXj" secondAttribute="centerY" id="w44-aX-Gr6"/>
+                            <constraint firstAttribute="trailing" secondItem="xVT-CR-Ghr" secondAttribute="trailing" constant="20" id="x2R-h6-nze"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="350"/>
+        </scene>
+    </scenes>
+</document>
